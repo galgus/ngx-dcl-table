@@ -1,5 +1,5 @@
 import {
-  Directive, Output, Input, EventEmitter, ElementRef, Renderer, HostListener
+  Directive, Output, Input, EventEmitter, ElementRef, Renderer2, HostListener
 } from '@angular/core';
 
 
@@ -14,9 +14,9 @@ export class NgxDclTableFilteringDirective {
 
   @Output() public tableChanged = new EventEmitter<any>();
 
-  constructor(private element: ElementRef, private renderer: Renderer) {
+  constructor(private element: ElementRef, private renderer: Renderer2) {
     // Set default value for filter
-    this.renderer.setElementProperty(
+    this.renderer.setProperty(
       this.element, 'value', this.ngTableFiltering.filterString
     );
   }

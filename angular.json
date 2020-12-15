@@ -13,6 +13,9 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "allowedCommonJsDependencies": [
+              "ngx-dcl"
+            ],
             "outputPath": "dist/ngx-dcl-table",
             "index": "src/index.html",
             "main": "src/main.ts",
